@@ -1,7 +1,7 @@
 # Redirect to Faststore App
 
 
-App to redirect users in the store framework environment to faststore
+IO Pixel app to redirect users in the store framework environment to faststore
 
 ## In order to use this app, you have to set the URL of the Faststore store. In onder to do that, you have to:
 
