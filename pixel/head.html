@@ -1,0 +1,33 @@
+<script>
+
+  function redirectToProduction(){
+
+    const { pathname, search } = window.location
+    const redirectDomain = decodeURIComponent("{{settings.redirectDomain}}")
+
+    if(
+      pathname === '/account' ||
+      pathname === '/login' ||
+      pathname === '/checkout' ||
+      pathname === '/checkout/orderPlaced' ||
+      pathname === '/checkout/orderPlaced/' ||
+      pathname === '/api/io/account' ||
+      pathname === '/api/io/login' ||
+      !redirectDomain) {
+        return false
+      }
+
+    const redirectLink = redirectDomain + pathname + search
+
+    window.location.href = redirectLink
+  }
+
+  (function() {
+    redirectToProduction()
+
+    window.addEventListener('hashchange',() => {
+      redirectToProduction()
+    })
+  })()
+
+</script>
