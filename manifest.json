@@ -1,7 +1,7 @@
 {
   "name": "proxy-to-fs",
   "vendor": "{{vendor}}",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.0",
   "title": "Redirect FastStore App",
   "description": "App to redirect users in the store framework environment to faststore",
   "billingOptions": {
