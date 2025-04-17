@@ -2,8 +2,13 @@
 
   function redirectToProduction(){
 
-    const { pathname, search } = window.location
+    const { pathname, search, origin } = window.location
     const redirectDomain = decodeURIComponent("{{settings.redirectDomain}}")
+
+    // Skip atendimento subaccount
+    if (origin === 'https://atendimentoviamarte.myvtex.com') {
+      return false
+    }
 
     if(
       pathname === '/account' ||
